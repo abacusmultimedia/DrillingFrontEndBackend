@@ -1,6 +1,6 @@
 # DrillingFrontEndBackend
-
-# DillingFrontEnd
+ The solution consist of two projects
+# 1-DillingFrontEnd
 
 # Introduction 
  	The solution solves the simple problem by performing curd operations and presenting output on a chart.
@@ -20,7 +20,7 @@
 
 
 
-# DrillingBackend
+# 2-DrillingBackend
 
 # Introduction 
     This API is responsible for performing CRUD operations. The solution contain only one project. Since, “EventsController” is responsible for Event Cruds, it provide an end point for retrieval of chart dat. 
