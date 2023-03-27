@@ -1,0 +1,38 @@
+<button nz-button [nzType]="'primary'" (click)="showModal()">
+  <span>Add </span>
+</button>
+
+<nz-table #basicTable [nzFrontPagination]="false" [nzData]="listOfData">
+  <thead>
+    <tr>
+      <th>Event</th>
+      <th>Start</th>
+      <th>End</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of listOfData">
+      <td>{{ data.eventTitle }}</td>
+      <td>{{ data.start }}</td>
+      <td>{{ data.end }}</td>
+      <td>
+        <a (click)="onUpdate(data)">Update</a>
+      </td>
+    </tr>
+  </tbody>
+</nz-table>
+
+<nz-modal
+  nzTitle="{{ _modelTitle | async }}"
+  [(nzVisible)]="isVisible"
+  (nzOnCancel)="handleCancel()"
+  (nzOnOk)="handleOk()"
+>
+  <ng-container *nzModalContent>
+    <app-chart-form
+      (newItemEvent)="newItemEventAdded()"
+      [_item]="_item"
+    ></app-chart-form>
+  </ng-container>
+</nz-modal>

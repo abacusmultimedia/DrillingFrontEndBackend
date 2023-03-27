@@ -1,0 +1,45 @@
+<form nz-form [formGroup]="eventForm" (ngSubmit)="submitForm()">
+  <div nz-row [nzGutter]="16">
+    <div nz-col class="gutter-row" [nzSpan]="6">
+      <div class="inner-box">Event title</div>
+    </div>
+
+    <div nz-col class="gutter-row" [nzSpan]="18">
+      <nz-form-item>
+        <nz-form-control nzErrorTip="Please input event title">
+          <input
+            nzSpan="5"
+            formControlName="eventTitle"
+            nz-input
+            placeholder="title"
+          />
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </div>
+  <div nz-row [nzGutter]="16">
+    <div nz-col class="gutter-row" [nzSpan]="6">
+      <div class="inner-box">Event start</div>
+    </div>
+    <div nz-col class="gutter-row" [nzSpan]="18">
+      <nz-form-item>
+        <nz-form-control nzErrorTip="Please input event start">
+          <input formControlName="start" nz-input placeholder="Event start" />
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </div>
+
+  <div nz-row [nzGutter]="16">
+    <div nz-col class="gutter-row" [nzSpan]="6">
+      <div class="inner-box">Event end</div>
+    </div>
+    <div nz-col class="gutter-row" [nzSpan]="18">
+      <nz-form-item>
+        <nz-form-control nzErrorTip="Please input event end">
+          <input formControlName="end" nz-input placeholder="Event end" />
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </div>
+</form>
